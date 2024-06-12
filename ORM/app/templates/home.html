@@ -20,13 +20,22 @@
             <th>Email</th>
             <th>Address</th>
         </tr>
+        
+        <!-- ... -->
+        {% for i in stu %}
+          
         <tr>
-            <td>1</td>
-            <td>Sujan</td>
-            <td>88</td>
-            <td>Sujan@gmail.com</td>
-            <td>Pokhara</td>
+            <td>{{i.id}}</td>
+            <td>{{i.name}}</td>
+            <td>{{i.age}}</td>
+            <td>{{i.email}}</td>
+            <td>{{i.address}}</td>
         </tr>
+
+        {% endfor %}
+
+        <!-- ... -->
+
     </table>
 </body>
 </html>
