@@ -35,17 +35,18 @@ def home(request):
     ### lookups
     ## to use loop ----lookup used-----useful in frontend
     # iexact=== removes case-sensitive---lower or uppercase--doesnot matter
-    stu=Student.objects.filter(name__exact="sujan")
-    stu=Student.objects.filter(name__iexact="sujan")
-    stu=Student.objects.filter(name__icontains="an")
-    stu=Student.objects.filter(name__startswith="suj")
-    stu=Student.objects.filter(name__endswith="an")
-    stu=Student.objects.filter(age__gt=20)
-    stu=Student.objects.filter(age__gte=20)
-    stu=Student.objects.filter(age__lte=20)
-    stu=Student.objects.filter(age__range=(20,40))
+    # stu=Student.objects.filter(name__exact="sujan")
+    # stu=Student.objects.filter(name__iexact="sujan")
+    # stu=Student.objects.filter(name__icontains="an")
+    # stu=Student.objects.filter(name__startswith="suj")
+    # stu=Student.objects.filter(name__endswith="an")
+    # stu=Student.objects.filter(age__gt=20)
+    # stu=Student.objects.filter(age__gte=20)
+    # stu=Student.objects.filter(age__lte=20)
+    stu=Student.objects.filter(age__range=(20,99))
 
     
 
-    return render(request, 'home.html', {'i':stu})
     return render(request, 'home.html', {'stu':stu})
+    # return render(request, 'home.html', {'i':stu})
+    # return render(request, 'home.html', {'stu':stu})
